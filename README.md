@@ -20,7 +20,7 @@ Adding New Conversations
 -----
 At the welcome screen, select the '*Add Person*' button. This will take you to the Add Person screen.
 
-At this screen, you can then enter the name of the person and what your conversation with them is.
+At this screen, enter the name of the person and what your conversation with them is.
 Then select the '*Add Chat*' button. This will add your new chat to the database for you to view and 
 manage
 
