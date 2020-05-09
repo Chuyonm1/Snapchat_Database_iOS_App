@@ -20,18 +20,21 @@ struct ButtonImage: View {
     var url: String
     var width: CGFloat
     var height: CGFloat
+    @State private var showWebPage:Bool = false
     var body: some View
     {
         
         //Utilizes WebView to open websites inside the app natively
         //rather than opening safari
-        NavigationLink(destination: WebsiteView(website: self.url))
+        Button(action: {
+            self.showWebPage.toggle()
+        })
         {
             image
             .renderingMode(.original) //makes image render correctly
             .resizable()
                 .frame(width: self.width, height: self.height)
-        }
+        }.sheet(isPresented: $showWebPage, content: {WebsiteView(website: self.url)})
     }
 }
 

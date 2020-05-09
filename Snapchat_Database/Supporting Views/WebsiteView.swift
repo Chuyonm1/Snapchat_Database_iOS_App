@@ -13,8 +13,15 @@ struct WebsiteView: View
     var website: String
     var body: some View
     {
-        WebView(url: website)
-            .offset(y:-50)
+        ZStack
+        {
+            VStack(alignment: .leading)
+            {
+                WebView(url: self.website)
+            }
+        }
+        //Makes page take up the whole screen
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
