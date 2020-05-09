@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var manageObjectContext
     @State private var showAddPerson = false
     var body: some View
     {
@@ -34,17 +35,14 @@ struct ContentView: View {
                     Image("snapchat")
                         .resizable()
                         .frame(width: 300, height: 300)
-                    NavigationLink(destination: AddPersonView())
+                    Button(action:{self.showAddPerson.toggle()})
                     {
                         Text("Add Person")
-                        .foregroundColor(Color.blue)
-                    }
-//                    Button(action:{self.showAddPerson.toggle()})
-//                    {
-//                        Text("Add Person")
-//                            .foregroundColor(Color.blue)
-//                    }.sheet(isPresented: $showAddPerson, content: {AddPersonView()})
-//                    .padding()
+                            .foregroundColor(Color.blue)
+                    }.sheet(isPresented: $showAddPerson, content: {AddPersonView()
+                        .environment(\.managedObjectContext, self.manageObjectContext)
+                    })
+                    .padding()
                     NavigationLink(destination: ViewChatView())
                     {
                         Text("View Chat")
