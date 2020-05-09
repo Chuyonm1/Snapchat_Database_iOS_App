@@ -13,6 +13,9 @@ struct AddPersonView: View {
     
     //calls a fetch request on the getAllToDoItems from Chats.swift
     @FetchRequest(fetchRequest: Chats.getAllChatData()) var chats:FetchedResults<Chats>
+
+    //Allows you to dismiss view on a button click
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @State private var name = ""
     @State private var missingFields: Bool = false
@@ -99,8 +102,7 @@ struct AddPersonView: View {
                    //alert displays the chat was not updated
                    else
                    {
-                        return Alert(title: Text("Chat added successfully"), dismissButton: .default(Text("ok")))
-                   }
+                        return Alert(title: Text("Chat added successfully"), dismissButton: .default(Text("ok"), action: {self.presentationMode.wrappedValue.dismiss()}))                   }
                }
                 
                 
@@ -114,7 +116,7 @@ struct AddPersonView: View {
                         return
                     }
                     var height = keyboardFrame.height
-                    height = height - 100
+                    height = height - 150
                     self.keyboardHeight = height
                 }
                 NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main)

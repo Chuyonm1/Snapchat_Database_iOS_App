@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showAddPerson = false
     var body: some View
     {
         NavigationView
@@ -36,8 +37,14 @@ struct ContentView: View {
                     NavigationLink(destination: AddPersonView())
                     {
                         Text("Add Person")
-                            .foregroundColor(Color.blue)
-                    }.padding()
+                        .foregroundColor(Color.blue)
+                    }
+//                    Button(action:{self.showAddPerson.toggle()})
+//                    {
+//                        Text("Add Person")
+//                            .foregroundColor(Color.blue)
+//                    }.sheet(isPresented: $showAddPerson, content: {AddPersonView()})
+//                    .padding()
                     NavigationLink(destination: ViewChatView())
                     {
                         Text("View Chat")
