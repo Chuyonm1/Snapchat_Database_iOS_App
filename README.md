@@ -1,6 +1,6 @@
 # Snapchat Database
-**Version:** 1.0 <br />
-**Published Date:** 04/08/2020
+**Version:** 1.1 <br />
+**Published Date:** 05/08/2020
 
 About
 ---------
@@ -18,7 +18,7 @@ have, which are sorted by the most recently updated.
 -----
 Adding New Conversations
 -----
-At the welcome screen, select the '*Add Person*' button. This will take you to the Add Person screen.
+At the welcome screen, select the '*Add Person*' button. This will bring up the Add Person screen.
 
 At this screen, enter the name of the person and what your conversation with them is.
 Then select the '*Add Chat*' button. This will add your new chat to the database for you to view and 
