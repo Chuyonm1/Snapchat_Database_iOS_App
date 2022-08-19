@@ -1,6 +1,6 @@
 # Snapchat Database
-**Version:** 1.1.1 <br />
-**Published Date:** 05/09/2020
+**Version:** 1.1.2 <br />
+**Published Date:** 8/19/2022
 
 About
 ---------

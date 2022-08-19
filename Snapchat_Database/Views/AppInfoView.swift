@@ -24,7 +24,7 @@ struct AppInfoView: View
                         .font(.headline)
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
-                    Text("Copyright © 2020 Dark Assassins Inc.")
+                    Text("Copyright © 2022 Dark Assassins Inc.")
                         .font(.headline)
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
@@ -35,7 +35,7 @@ struct AppInfoView: View
                 }.offset(y:-150)
                 ButtonImage(image: Image("DAIlogo2"), url: "https://www.darkassassinsinc.com", width: 350, height: 250)
                 
-                Text("Version 1.1.1")
+                Text("Version 1.1.2")
                     .font(.headline)
                     .fontWeight(.bold)
                     .foregroundColor(Color.black)
