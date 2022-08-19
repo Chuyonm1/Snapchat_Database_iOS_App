@@ -16,7 +16,6 @@ struct ChatRow: View {
         VStack
         {
             Text(name)
-                .foregroundColor(.black)
                 .font(.headline)
         }
     }

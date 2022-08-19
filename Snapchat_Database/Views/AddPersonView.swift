@@ -109,22 +109,23 @@ struct AddPersonView: View {
             }//Moves vstack up once keyboard is activated via TextView
             .offset(y:-self.keyboardHeight)
                 .animation(.spring())
-            .onAppear{
-                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main)
-                {
-                    (notification) in guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else{
-                        return
-                    }
-                    var height = keyboardFrame.height
-                    height = height - 150
-                    self.keyboardHeight = height
-                }
-                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main)
-                {
-                    (notification) in
-                    self.keyboardHeight = 0
-                }
-            }
+            // Outdated for new versions of iOS
+//            .onAppear{
+//                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main)
+//                {
+//                    (notification) in guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else{
+//                        return
+//                    }
+//                    var height = keyboardFrame.height
+//                    height = height - 150
+//                    self.keyboardHeight = height
+//                }
+//                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main)
+//                {
+//                    (notification) in
+//                    self.keyboardHeight = 0
+//                }
+//            }
         }.onTapGesture
         {
             self.endEditing(true)

@@ -366,7 +366,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "Will-Jones.Snapchat-Database";
 				PRODUCT_NAME = "Snapchat DB";
 				SWIFT_VERSION = 5.0;
@@ -388,7 +388,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "Will-Jones.Snapchat-Database";
 				PRODUCT_NAME = "Snapchat DB";
 				SWIFT_VERSION = 5.0;
