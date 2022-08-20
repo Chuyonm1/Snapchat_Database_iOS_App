@@ -33,7 +33,7 @@ struct AppInfoView: View
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
                 }.offset(y:-150)
-                ButtonImage(image: Image("DAIlogo2"), url: "https://www.darkassassinsinc.com", width: 350, height: 250)
+                ButtonImage(image: Image("DAIlogo2"), url: "https://darkassassinsinc.com", width: 350, height: 250)
                 
                 Text("Version 1.1.2")
                     .font(.headline)
