@@ -7,7 +7,18 @@
 //
 
 import SwiftUI
+struct ListBackgroundModifier: ViewModifier {
 
+    @ViewBuilder
+    func body(content: Content) -> some View {
+        if #available(iOS 16.0, *) {
+            content
+                .scrollContentBackground(.hidden)
+        } else {
+            content
+        }
+    }
+}
 struct ViewChatView: View {
     @Environment(\.managedObjectContext) var manageObjectContext
     
@@ -60,6 +71,7 @@ struct ViewChatView: View {
             }.background(Color.yellow)
             .navigationBarTitle("Chats")
             .navigationBarItems(trailing:  EditButton())
+            .modifier(ListBackgroundModifier())
         }
     }
 }
