@@ -7,6 +7,7 @@ About
 - This is an iOS app written in Swfit 5 and utilizes SwfitUI and CoreData
 - This app is designed to manage your Snapchat conversations so you'll never
 forget a conversation ever again
+- This app is compatible with iOS devices running iOS 13 or newer
 -------
 
 Usage
